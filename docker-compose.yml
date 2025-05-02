@@ -1,0 +1,10 @@
+services:
+  anpikakunin:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/app
+      - /app/node_modules # ホストの node_modules を無効化
+    working_dir: /app
+    command: yarn dev --port 8080

@@ -9,7 +9,7 @@ export function useWebSocket() {
     setStatus(msgUpdateService.getWebSocketStatus());
 
     const unsubscribe = msgUpdateService.subscribe((data) => {
-      setTelegrams(prev => [...prev, data]);
+      setTelegrams((prev) => [...prev, data]);
     });
 
     return () => {
@@ -21,6 +21,6 @@ export function useWebSocket() {
     status: msgUpdateService.getWebSocketStatus(),
     start: () => msgUpdateService.webSocketStart(),
     close: () => msgUpdateService.webSocketClose(),
-    telegrams
+    telegrams,
   };
 }

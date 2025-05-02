@@ -1,12 +1,13 @@
 import { openDB } from 'idb';
 
-const dbPromise = typeof window !== 'undefined' 
-  ? openDB('etcm-settings', 1, {
-      upgrade(db) {
-        db.createObjectStore('settings');
-      },
-    })
-  : null;
+const dbPromise =
+  typeof window !== 'undefined'
+    ? openDB('etcm-settings', 1, {
+        upgrade(db) {
+          db.createObjectStore('settings');
+        },
+      })
+    : null;
 
 export const Settings = {
   async get(key: string) {

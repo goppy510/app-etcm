@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { apiService } from "../lib/api/api";
 import { oauth2Service } from "../lib/api/oauth2";
 import MainComponent from "../components/MainComponent";
+import React from "react";
 
 const packageInfo = {
   version: "0.1.0",

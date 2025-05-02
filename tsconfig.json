@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2021",
+    "baseUrl": ".",
+    "target": "ES2024",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,9 +21,6 @@
     "plugins": [
       {
         "name": "next",
-        "@/*": [
-          "./src/*"
-        ]
       }
     ],
     "paths": {
